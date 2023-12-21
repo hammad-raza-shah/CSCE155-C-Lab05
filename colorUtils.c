@@ -46,3 +46,9 @@ if(min < g && min < b)
   }
   return (max + min)/2;
 }
+
+int toGrayScaleLuminosity(int r, int g, int b)
+{
+  int scale = r * 0.21 + g * 0.72 + b * 0.07;
+  return round(scale);
+}
