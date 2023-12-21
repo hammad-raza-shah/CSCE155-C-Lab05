@@ -31,4 +31,18 @@ int toGraysacleLightness(int r,int g, int b)
   else{
     max = b;
   }
+
+if(min < g && min < b)
+  {
+    min = r;
+  }
+  else if (g < min && g < b)
+  {
+    min = g;
+  }
+  else
+  {
+    min = b;
+  }
+  return (max + min)/2;
 }
